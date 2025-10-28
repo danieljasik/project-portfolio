@@ -1,0 +1,41 @@
+/* Używamy czcionki, która idealnie imituje terminal DOS */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+  --primary-color: #33a72f; /* Jaskrawy, "kłujący w oczy" zielony */
+  --bg-color: #000000;
+  --text-color: #389950;
+  --font-main: 'VT323', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  font-size: 1.2rem; /* Powiększamy czcionkę dla klimatu DOS */
+  line-height: 1.2;
+  text-shadow: 0 0 5px rgba(37, 175, 71, 0.5); /* Lekka poświata */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Główny kontener aplikacji */
+.app-container {
+  padding: 1rem;
+  padding-top: 5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 150px; /* WAŻNE: Dodajemy padding na dole, aby zrobić miejsce na stopkę */
+}
+
+/* Ukrywamy domyślne style, które zastąpimy naszymi */
+section, h1, h2 {
+  display: none;
+}

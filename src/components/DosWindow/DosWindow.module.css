@@ -1,0 +1,25 @@
+.window {
+  border: 2px solid var(--primary-color);
+  margin-bottom: 2rem;
+  background-color: var(--bg-color);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--primary-color);
+  padding: 0.25rem 0.75rem;
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+  text-shadow: none;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.content {
+  padding: 1rem;
+  min-height: 100px;
+}
