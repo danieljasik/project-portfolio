@@ -79,7 +79,7 @@ export default function Home({ portfolioData }) {
             </DosWindow>
           </div>
 
-          <div id="about" style={{ ...scrollOffset, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div id="about" style={{ ...scrollOffset, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', paddingTop: '10vh' }}>
             <DosWindow title="O.NAS">
               <h3 style={{ textAlign: 'center' }}>THREE GUYS ONE CODE</h3>
               <p style={{ textAlign: 'center', fontStyle: 'italic', opacity: 0.8 }}>
@@ -102,7 +102,7 @@ export default function Home({ portfolioData }) {
             </DosWindow>
           </div>
 
-          <div id="skills" style={{ ...scrollOffset, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div id="skills" style={{ ...scrollOffset, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', paddingTop: '10vh' }}>
             <DosWindow title="SKILLS.DAT">
               {/* --- UKŁAD DWUKOLUMNOWY DLA UMIEJĘTNOŚCI --- */}
               <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
@@ -152,7 +152,7 @@ export default function Home({ portfolioData }) {
             </DosWindow>
           </div>
           
-          <div id="projects" style={{ ...scrollOffset, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div id="projects" style={{ ...scrollOffset, minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'flex-start', paddingTop: '10vh' }}>
             <DosWindow title="PROJECTS.DIR">
                {projects.map(project => (
                   <div key={project.id} style={{borderBottom: '1px dashed var(--primary-color)', marginBottom: '1rem', paddingBottom: '1rem'}}>
