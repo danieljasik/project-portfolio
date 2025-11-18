@@ -73,14 +73,25 @@ export const portfolioData = {
     }
   ],
   
-  // ---> UPEWNIJ SIĘ, ŻE TA SEKCJA ISTNIEJE <---
   achievements: [
-    "🏆 Best Innovation Award - TechHack 2024",
-    "🥇 1st Place - Blockchain Hackathon Warsaw 2023",
-    "📜 AWS Certified Solutions Architect",
-    "⭐ 5-star rating on Upwork (50+ projects)",
-    "💡 Published 3 open-source libraries (1000+ stars)",
-    "📝 Tech blogger - 25+ articles on dev.to"
+    "🏆 Nagroda 'To Działa™' - Kategoria Produkcyjna 2024",
+    '(Za wdrożenie, które zadziałało za pierwszym razem, ku zdziwieniu nas samych i klienta.)',
+    "🥇 Złoty Medal w Debugowaniu o Północy",
+    '(Uhonorowani za znalezienie tego jednego brakującego średnika o 3 nad ranem.)',
+    "📜 Certyfikat Przetrwania Aktualizacji Zależności",
+    '(Pomyślnie zaktualizowaliśmy node_modules bez zepsucia całego projektu.)',
+    "⭐ 5-gwiazdkowa ocena w kategorii 'Czyta dokumentację'",
+    '(Przynajmniej jeden z nas twierdzi, że to robi.)',
+    "☕ Rekord Zespołu w Przeliczaniu Kawy na Linie Kodu",
+    '(Nasz współczynnik konwersji jest tajemnicą handlową.)',
+    "🏆 Nagroda za Naprawienie Błędu, Który Sami Stworzyliśmy",
+    '(I obiecujemy, że zrobimy to ponownie.)',
+    "💡 Opublikowano 3 hipotezy na temat tego, dlaczego kod działa",
+    '(Żadna nie została jeszcze potwierdzona eksperymentalnie.)',
+    "📝 Autor bestsellera 'To działało na mojej maszynie i inne wymówki'",
+    '(Dostępny w formie komentarzy w naszym kodzie źródłowym.)',
+    "🥇 I Miejsce - Kto Dłużej Wytrzyma na Spotkaniu, Które Mogło Być Mailem",
+    '(Nasz rekordzista zasnął dopiero po 45 minutach.)',
   ],
   // ------------------------------------------------
 

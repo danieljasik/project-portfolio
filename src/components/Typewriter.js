@@ -7,39 +7,39 @@ const useTypewriter = (lines, speed = 50, initialDelay = 1000) => {
   const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
+    let cancelled = false;
     setCompletedLines([]);
     setCurrentPartial('');
     setIsComplete(false);
 
-    setTimeout(() => {
-      const typeLine = (lineIndex) => {
-        if (lineIndex >= lines.length) {
-          setIsComplete(true);
-          return;
-        }
+    const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+    const runTypewriter = async () => {
+      await sleep(initialDelay);
+      for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
+        if (cancelled) return;
         const line = lines[lineIndex];
-        let i = 0;
-        const interval = setInterval(() => {
-          if (i < line.length) {
-            setCurrentPartial(prev => prev + line.charAt(i));
-            i++;
-          } else {
-            clearInterval(interval);
-            setCompletedLines(prev => [...prev, line]);
-            setCurrentPartial('');
-            typeLine(lineIndex + 1);
-          }
-        }, speed);
-      };
+        let partial = '';
+        for (let i = 0; i < line.length; i++) {
+          if (cancelled) return;
+          partial += line.charAt(i);
+          setCurrentPartial(partial);
+          // eslint-disable-next-line no-await-in-loop
+          await sleep(speed);
+        }
+        setCompletedLines((prev) => [...prev, line]);
+        setCurrentPartial('');
+      }
+      setIsComplete(true);
+    };
 
-      typeLine(0);
-    }, initialDelay);
+    runTypewriter();
 
     return () => {
-      // Cleanup if needed
+      cancelled = true;
     };
-  }, [lines, speed, initialDelay]);  return { completedLines, currentPartial, isComplete };
+  }, [lines, speed, initialDelay]);
+  return { completedLines, currentPartial, isComplete };
 };
 
 const Typewriter = ({ lines, speed, initialDelay, onComplete }) => {
@@ -56,8 +56,13 @@ const Typewriter = ({ lines, speed, initialDelay, onComplete }) => {
       {completedLines.map((line, index) => (
         <div key={index} style={index === lines.length - 1 ? { marginTop: '2em' } : {}}>{line}</div>
       ))}
-      {currentPartial && <div>{currentPartial}</div>}
-      <span style={styles.cursor}></span>
+      {/* Kursor pojawia się tylko na końcu aktualnie pisanej linii */}
+      {currentPartial && (
+        <div>
+          {currentPartial}
+          <span style={styles.cursor}></span>
+        </div>
+      )}
     </>
   );
 };
@@ -66,11 +71,12 @@ const styles = {
   cursor: {
     display: 'inline-block',
     width: '10px',
-    height: '1.5rem', // Dopasuj do rozmiaru czcionki
+    height: '1.2em', // Dopasuj do rozmiaru czcionki
     backgroundColor: 'var(--primary-color)',
     animation: 'blink 1s step-end infinite',
     verticalAlign: 'bottom',
-    marginLeft: '5px'
+    marginLeft: '2px',
+    borderRadius: '2px',
   }
 };
 
