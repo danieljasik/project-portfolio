@@ -41,19 +41,19 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      name: "Konfigurator zamówień zamków",
-      filename: "LOCKCONF",
+      name: "Dystrybutor zamków Antywłamaniowych",
+      filename: "Lockmaster",
       extension: ".EXE",
-      size: "2.4MB",
-      realName: "Konfigurator zamówień zamków",
-      client: "Producent zamków antywłamaniowych",
+      size: "8.4MB",
+      realName: "Dystrybutor zamków Antywłamaniowych",
+      client: "Dystrybutor zamków antywłamaniowych",
       description: "Aplikacja webowa B2B pozwalająca na wizualną konfigurację i składanie spersonalizowanych zamówień na zamki antywłamaniowe.",
       challenge: "Klient potrzebował systemu, który uprości proces składania złożonych zamówień B2B. Dotychczasowy proces oparty na mailach i arkuszach Excel generował błędy i opóźnienia.",
       solution: "Stworzyliśmy interaktywny konfigurator 3D z walidacją w czasie rzeczywistym. System automatycznie generuje specyfikacje PDF gotowe do produkcji oraz integruje się z systemem ERP klienta.",
       outcome: "Redukcja błędów zamówień o 85%, skrócenie czasu obsługi zamówienia z 2 dni do 15 minut, wzrost satysfakcji klientów B2B o 40%.",
       technologies: ["React", "Node.js", "PostgreSQL", "Three.js", "PDFKit"],
       projectIcon: "[■]",
-      year: "2023"
+      year: "2025"
     },
     {
       id: 2,

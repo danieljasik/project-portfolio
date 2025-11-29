@@ -14,12 +14,16 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--font-main);
   font-size: 1.2rem; /* Powiększamy czcionkę dla klimatu DOS */
   line-height: 1.2;
   text-shadow: 0 0 5px rgba(37, 175, 71, 0.5); /* Lekka poświata */
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 * {
@@ -31,6 +35,7 @@ body {
   padding: 1rem;
   padding-top: 5rem;
   max-width: 1000px;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 150px; /* WAŻNE: Dodajemy padding na dole, aby zrobić miejsce na stopkę */
 }
@@ -132,5 +137,39 @@ section, h1, h2 {
     rgba(0, 0, 0, 0.4) 100%
   );
   pointer-events: none;
+}
+
+/* --- Projekty: wrapper tabeli --- */
+.projects-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+}
+
+.projects-table-wrapper table {
+  min-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Mobile - orientacja pionowa i pozioma */
+@media (max-width: 768px) {
+  .projects-table-wrapper {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-table-wrapper {
+    padding: 0 0.75rem;
+  }
+}
+
+/* Orientacja pozioma na małych urządzeniach */
+@media (orientation: landscape) and (max-height: 600px) {
+  .projects-table-wrapper {
+    padding: 0 2rem;
+  }
 }
 
