@@ -1,12 +1,12 @@
 export const portfolioData = {
   profile: {
-    name: "Alex 'Neo' Kowalski",
+    name: "Three Guys One Code",
     title: "Full Stack Developer & Digital Architect",
     location: "Warsaw, Poland",
-    email: "neo.kowalski@matrix.dev",
+    email: "kontakt@threeguysonecode.ohv",
     phone: "+48 123 456 789",
-    github: "https://github.com/neo-kowalski",
-    linkedin: "https://linkedin.com/in/neo-kowalski",
+    github: "https://github.com/threeguysonecode",
+    linkedin: "https://linkedin.com/in/threeguysonecode",
     experience: "5+ years",
     status: "Available for freelance projects",
     motto: "There is no spoon... only clean code."
